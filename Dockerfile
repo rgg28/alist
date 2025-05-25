@@ -1,5 +1,5 @@
 # Usa una imagen base ligera de Linux
-FROM alpine:latest
+FROM ubuntu:latest
 
 # Establece el directorio de trabajo
 WORKDIR /app
