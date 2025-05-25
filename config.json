@@ -11,7 +11,7 @@
     "user": "",
     "password": "",
     "name": "",
-    "db_file": "data/data.db",  <-- CAMBIADO AQUÍ
+    "db_file": "data/data.db", 
     "table_prefix": "x_",
     "ssl_mode": "",
     "dsn": ""
@@ -32,12 +32,12 @@
     "unix_file_perm": "",
     "enable_h2c": false
   },
-  "temp_dir": "data/temp",  <-- CAMBIADO AQUÍ
-  "bleve_dir": "data/bleve",  <-- CAMBIADO AQUÍ
+  "temp_dir": "data/temp",  
+  "bleve_dir": "data/bleve",  
   "dist_dir": "",
   "log": {
     "enable": true,
-    "name": "data/log/log.log",  <-- CAMBIADO AQUÍ
+    "name": "data/log/log.log",  
     "max_size": 50,
     "max_backups": 30,
     "max_age": 28,
