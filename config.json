@@ -1,0 +1,39 @@
+{
+  "address": "0.0.0.0",
+  "port": "5244",
+  "scheme": "http",
+  "ssl_cert": "",
+  "ssl_key": "",
+  "site_url": "",
+  "cdn": "",
+  "force_redirect": false,
+  "auto_update": false,
+  "max_connections": 0,
+  "token_expires_in": 48,
+  "jwt_secret": "una_clave_secreta_fuerte",
+  "database": {
+    "type": "sqlite3",
+    "path": "data.db",
+    "host": "",
+    "port": 0,
+    "user": "",
+    "password": "",
+    "name": "",
+    "db_type": ""
+  },
+  "temp_dir": "/tmp",
+  "upload_dir": "/tmp",
+  "form_cache_size": 1000,
+  "log": {
+    "file": "log.log",
+    "level": "info",
+    "max_size": 100,
+    "max_backups": 7,
+    "max_age": 28,
+    "compress": false
+  },
+  "breaker_duration": 15,
+  "hide_config": true,
+  "delay_proxy": 1,
+  "web_proxy_url": ""
+}
