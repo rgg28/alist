@@ -41,7 +41,6 @@
   "tls_insecure_skip_verify": true,
   "last_launched_version": "v3.45.0",
 
-  // 👇 Agrega esta parte:
   "webdav": {
     "enable": true,
     "password": "${WEBDAV_PASSWORD}"
