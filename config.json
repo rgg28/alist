@@ -44,6 +44,6 @@
   // 👇 Agrega esta parte:
   "webdav": {
     "enable": true,
-    "password": "tu-clave-secreta-aqui"
+    "password": "juegospc"
   }
 }
