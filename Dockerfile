@@ -12,7 +12,7 @@ WORKDIR /opt/alist
 RUN mkdir -p /opt/alist/data/temp /opt/alist/data/bleve /opt/alist/data/log
 
 # Copiar archivos personalizados
-COPY config.json /opt/alist/config.json
+COPY config.json /opt/alist/data/config.json
 COPY data/data.db /opt/alist/data/data.db
 
 # Descargar e instalar Alist
