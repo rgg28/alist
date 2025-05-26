@@ -1,7 +1,7 @@
 # Usamos una imagen oficial de Ubuntu
 FROM ubuntu:latest
 
-# Actualizamos paquetes y aseguramos tener los certificados CA instalados
+# Actualizamos paquetes y aseguramos tener los certificados CA e instalamos curl
 RUN apt-get update && \
     apt-get install -y \
         ca-certificates \  # Certificados raíz necesarios para TLS
