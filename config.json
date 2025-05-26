@@ -2,7 +2,7 @@
   "force": false,
   "site_url": "",
   "cdn": "",
-  "jwt_secret": "h3HiwklQjTBPkJbi",
+  "jwt_secret": "${JWT_SECRET}",
   "token_expires_in": 48,
   "database": {
     "type": "sqlite3",
@@ -44,6 +44,6 @@
   // 👇 Agrega esta parte:
   "webdav": {
     "enable": true,
-    "password": "juegospc"
+    "password": "${WEBDAV_PASSWORD}"
   }
 }
