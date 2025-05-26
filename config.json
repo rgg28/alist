@@ -2,7 +2,7 @@
   "force": false,
   "site_url": "",
   "cdn": "",
-  "jwt_secret": "h3HiwklQjTBPkJbi", 
+  "jwt_secret": "h3HiwklQjTBPkJbi",
   "token_expires_in": 48,
   "database": {
     "type": "sqlite3",
@@ -11,12 +11,11 @@
     "user": "",
     "password": "",
     "name": "",
-    "db_file": "/opt/alist/data/data.db", 
+    "db_file": "/opt/alist/data/data.db",
     "table_prefix": "x_",
     "ssl_mode": "",
     "dsn": ""
   },
-  
   "scheme": {
     "address": "0.0.0.0",
     "http_port": 5244,
@@ -28,18 +27,23 @@
     "unix_file_perm": "",
     "enable_h2c": false
   },
-  "temp_dir": "/opt/alist/data/temp", 
-  "bleve_dir": "/opt/alist/data/bleve", 
+  "temp_dir": "/opt/alist/data/temp",
+  "bleve_dir": "/opt/alist/data/bleve",
   "dist_dir": "",
   "log": {
     "enable": true,
-    "name": "/opt/alist/data/log/log.log", 
+    "name": "/opt/alist/data/log/log.log",
     "max_size": 50,
     "max_backups": 30,
     "max_age": 28,
     "compress": false
   },
-  
-  "tls_insecure_skip_verify": true, 
-  "last_launched_version": "v3.45.0"
+  "tls_insecure_skip_verify": true,
+  "last_launched_version": "v3.45.0",
+
+  // 👇 Agrega esta parte:
+  "webdav": {
+    "enable": true,
+    "password": "tu-clave-secreta-aqui"
+  }
 }
