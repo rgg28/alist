@@ -1,11 +1,23 @@
-FROM ubuntu:22.04
-WORKDIR /opt/alist/app # Nuevo WORKDIR para la aplicación (donde estará el ejecutable alist y config.json)
-COPY alist .
-COPY config.json .
-RUN chmod +x alist
-EXPOSE 5244
-# Asegúrate de que las carpetas de datos existan dentro del volumen persistente
-RUN mkdir -p /opt/alist/data/log /opt/alist/data/temp /opt/alist/data/bleve
+# Usamos una imagen oficial de Ubuntu
+FROM ubuntu:latest
 
-# Comando para iniciar Alist, indicándole que use /opt/alist/data para sus datos
-CMD ["./alist", "server", "--data", "/opt/alist/data"]
+# Actualizamos paquetes y aseguramos tener los certificados CA instalados
+RUN apt-get update && \
+    apt-get install -y \
+        ca-certificates \  # Certificados raíz necesarios para TLS
+        curl \              # Para descargar Alist
+        tzdata \            # Opcional, si quieres configurar zona horaria
+        && \
+    rm -rf /var/lib/apt/lists/*
+
+# Creamos el directorio donde vivirá Alist
+WORKDIR /alist
+
+# Descargamos la última versión de Alist para Linux x64
+RUN curl -sL https://github.com/alist-org/alist/releases/latest/download/alist-linux-amd64.tar.gz  | tar -xz
+
+# Exponemos el puerto predeterminado de Alist
+EXPOSE 5244
+
+# Iniciamos Alist
+CMD ["./alist", "server"]
